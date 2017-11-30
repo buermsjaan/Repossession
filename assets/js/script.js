@@ -10,11 +10,39 @@ $(document).ready(function () {
     });
 
     $('#login').hide();
+
+    checkAuth();
     getImages();
     getTerrorists();
     getMines();
 
 });
+
+var checkAuth = function(){
+
+    var ajaxreq = $.ajax({
+        url: "http://37.230.98.72/htf/api/terrorists",
+        dataType: "json",
+        headers: {'Authorization': 'Bearer ' + Cookies.get("accessToken")},
+        type: "GET",
+        timeout: 3000,
+        complete: function (data) {
+
+        }
+
+    });
+    ajaxreq.done(function(){
+
+    });
+
+    ajaxreq.fail(function(httpObj) {
+        $("#login").show();
+        $("#Container").hide();
+
+    });
+
+
+};
 
 var getTerrorists = function() {
     var ajaxreq = $.ajax({
@@ -35,16 +63,7 @@ var getTerrorists = function() {
         }
 
     });
-    ajaxreq.done(function(){
 
-    });
-
-    ajaxreq.fail(function(httpObj) {
-        if(httpObj.status==401)
-            $("#login").show();
-
-
-    });
 };
 
 

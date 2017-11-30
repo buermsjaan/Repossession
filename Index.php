@@ -21,7 +21,7 @@
 <h1 class="center-align"> Repossession Home </h1>
 
 <a href=login.php id="login" class="waves-effect waves-light btn">Click here to log in</a>
-    <ul class="collapsible popout" data-collapsible="accordion">
+    <ul id="Container"   class="collapsible popout" data-collapsible="accordion">
         <li>
         <div class="collapsible-header">
             Terrorists
