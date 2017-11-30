@@ -77,3 +77,9 @@ img.resize{
     max-width: 400px;
     max-height: 400px;
 }
+
+.btn{
+    margin-left: 5px;
+    background-color: #67696d;
+    color: #EAC67A  ;
+}
