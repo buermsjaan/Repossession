@@ -17,6 +17,28 @@ $(document).ready(function () {
     getMines();
     getPolls();
 
+    $("#uploadimage").on('submit',(function(e) {
+        e.preventDefault();
+        $("#message").empty();
+        $('#loading').show();
+        $.ajax({
+            url: "http://37.230.98.72/htf/api/images", // Url to which the request is send
+            headers: {'Authorization': 'Bearer ' + Cookies.get("accessToken")},
+            type: "POST",             // Type of request to be send, called as method
+            data: new FormData(this), // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+            contentType: false,       // The content type used when sending data to the server.
+            cache: false,             // To unable request pages to be cached
+            processData:false,        // To send DOMDocument or non processed data file it is set to false
+            success: function(data)   // A function to be called if request succeeds
+            {
+                console.log(data);
+                $('#loading').hide();
+                $("#message").html(data);
+            }
+        });
+    }));
+
+
 });
 
 var checkAuth = function(){
@@ -121,9 +143,21 @@ var getPolls = function() {
             console.log(data);
             var polls = data.responseJSON;
 
+
             for (i = 0; i < polls.length; i++) {
+
+
                 console.log(polls[i]);
-                $('.PollCollection').append("<li class='collection-item'>" + "<div class='card-panel'>" + "<span class='red-text text-darken-2'>" + "<h3>" +  polls[i].description + "</h3>" + "</span>" + "</div>" + "</li>");
+                $('.PollCollection').append("<li class='collection-item'>" + "<div class='card-panel'>" + "<span class='red-text text-darken-2'>" + "<h3>" +  polls[i].description + "</h3>" + "</span>");
+                var options = polls[i].options;
+                for (b = 0; b < options.length; b++) {
+
+                    $('.PollCollection').append("<a class='waves-effect waves-light btn'>" + options[b].name+ " " +"</a>");
+                }
+
+
+
+                $('.PollCollection').append("</div>" + "</li>");
             }
         }
 

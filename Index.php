@@ -66,6 +66,25 @@
             </div>
         </li>
 
+        <li>
+            <div class="collapsible-header">
+                Upload Image
+            </div>
+
+            <div class="collapsible-body">
+                <span><ul><form id="uploadimage" action="" method="post" enctype="multipart/form-data">
+                            <div id="image_preview"><img id="previewing" src="noimage.png" /></div>
+                            <hr id="line">
+                            <div id="selectImage">
+                                <label>Select Your Image</label><br/>
+                                <input type="file" name="file" id="file" required />
+                                <input type="submit" value="Upload" class="submit" />
+                            </div>
+                        </form></ul></span>
+
+            </div>
+        </li>
+
     </ul>
 
 </div>
