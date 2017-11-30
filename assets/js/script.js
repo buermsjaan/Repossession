@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
 
-
+    getImages();
     getTerrorists();
     getMines();
 
@@ -59,3 +59,24 @@ var getMines = function() {
 
 };
 
+    var getImages = function() {
+        var ajaxreq = $.ajax({
+            url: "http://37.230.98.72/htf/api/images",
+            dataType: "json",
+            headers: {'Authorization': 'Bearer ' + Cookies.get("accessToken")},
+            type: "GET",
+            timeout: 3000,
+            complete: function (data) {
+                console.log(data);
+                var images = data.responseJSON;
+
+                for (i = 0; i < images.length; i++) {
+                    console.log(images[i]);
+
+                    $('.ImageCollection').append("<li class='collection-item'>" + "<div class='card-panel'>" + "<span class='red-text text-darken-2'>" + "<h3>" +  images[i].user.name + "</h3>"+ "<img class='resize' src=http://37.230.98.72/htf" + images[i].url + ">" + "</span>" + "</div>" + "</li>");
+                }
+            }
+
+        })
+
+    };
