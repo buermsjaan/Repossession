@@ -19,7 +19,9 @@
 
     <a href=login.php id="login" class="waves-effect waves-light btn">Click here to log in</a>
 
-    
+    <ul class="TerroristCollection">
+
+    </ul>
 
 </body>
 
