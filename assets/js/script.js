@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
 
-    getImages();
+    //getImages();
     getTerrorists();
     getMines();
 
@@ -34,7 +34,13 @@ var getTerrorists = function() {
             }
         }
 
-    })};
+    });
+    ajaxreq.fail(function(httpObj) {
+        if(httpObj.status==401)
+            console.log("catched");
+
+    });
+};
 
 
 var getMines = function() {
