@@ -54,8 +54,20 @@
 
             </div>
         </li>
+
+        <li>
+            <div class="collapsible-header">
+                Polls
+            </div>
+
+            <div class="collapsible-body">
+                <span><ul class="PollCollection"></ul></span>
+
+            </div>
+        </li>
+
     </ul>
-            </ul>
+
 </div>
 
 </body>

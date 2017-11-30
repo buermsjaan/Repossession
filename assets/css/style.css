@@ -71,7 +71,9 @@ h3{
     background-color: #272b30;
 }
 
-.TerroristCollection
-{
-    color: #EAC67A;
+img.resize{
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 400px;
 }
