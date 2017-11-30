@@ -27,6 +27,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+<script src="assets/js/js.cookie.js" type="text/javascript"></script>
+
 
 <script src=assets/js/script.js></script>
 
