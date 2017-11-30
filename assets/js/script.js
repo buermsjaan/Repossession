@@ -1,4 +1,4 @@
-/**
+    /**
  * Created by Wout-PC on 30/11/2017.
  */
 console.log("LETSGO");
@@ -9,10 +9,10 @@ $(document).ready(function () {
 
 });
 
-var loginFunction = function(){
+var loginFunction = function(accessToken){
 
     var thisData = {
-        "qrCode": "91a3d65875df88e809f86b120e096f04ce5702013c7978c1e48b4d5f03edcdd6a18d150c0c582449b5ed0d73284fc2cbff6b03"
+        "qrCode": accessToken
     };
 
     var ajaxreq = $.ajax({
@@ -25,6 +25,9 @@ var loginFunction = function(){
             request = r;
 
             console.log(request);
+            var user=JSON.stringify(request.user);
+            document.cookie = "accessToken="  + request.accessToken;
+            document.cookie = "user="  + user;
 
         })
         .fail(function(){
@@ -42,9 +45,13 @@ function openQRCamera(node) {
                 alert("No QR code found. Please make sure the QR code is within the camera's frame and try again.");
             } else {
                 node.parentNode.previousElementSibling.value = res;
-            }
+                console.log(res);
+                loginFunction(res)
+            };
         };
         qrcode.decode(reader.result);
+
     };
     reader.readAsDataURL(node.files[0]);
 }
+
