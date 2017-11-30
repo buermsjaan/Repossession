@@ -36,7 +36,7 @@ function openQRCamera(node) {
                 node.parentNode.previousElementSibling.value = res;
                 console.log(res);
                 loginFunction(res);
-                window.location.href = '/Repossession/index.php';
+                window.location.href = '/index.php';
                 return false;
             };
         };
