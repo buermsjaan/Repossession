@@ -15,8 +15,8 @@ body{
 
 #login
 {
-    color:#984843;
-    background-color: #233237;
+    color:#EAC67A;
+    background-color: #67696d;
 }
 
 h1{
@@ -62,10 +62,13 @@ h3{
     color: #EAC67A  ;
 }
 
+
 .collapsible-body {
-    background-color: #233237;
+    background-color: #272b30;
 }
 
 .card-panel {
-    background-color: #233237;
+    background-color: #272b30;
 }
+
+.TerroristCollection
