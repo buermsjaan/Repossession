@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+<h1>test</h1>
 <input type=text class=qrcode-text>
 <label class=qrcode-text-btn>
     <input type=file
@@ -24,9 +25,7 @@
            tabindex=-1>
 </label>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="assets/js/materialize.min.js"></script>
 <script src="assets/js/script.js"></script>
-<script src="https://rawgit.com/sitepoint-editors/jsqrcode/master/src/qr_packed.js">
-</script>
+<script src="assets/js/qrcode.js"></script>
 </body>
 </html>
