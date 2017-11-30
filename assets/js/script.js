@@ -9,8 +9,8 @@ $(document).ready(function () {
         return false;
     });
 
-
-    //getImages();
+    $('#login').hide();
+    getImages();
     getTerrorists();
     getMines();
 
@@ -35,9 +35,14 @@ var getTerrorists = function() {
         }
 
     });
+    ajaxreq.done(function(){
+
+    });
+
     ajaxreq.fail(function(httpObj) {
         if(httpObj.status==401)
-            console.log("catched");
+            $("#login").show();
+
 
     });
 };
@@ -65,24 +70,24 @@ var getMines = function() {
 
 };
 
-    var getImages = function() {
-        var ajaxreq = $.ajax({
-            url: "http://37.230.98.72/htf/api/images",
-            dataType: "json",
-            headers: {'Authorization': 'Bearer ' + Cookies.get("accessToken")},
-            type: "GET",
-            timeout: 3000,
-            complete: function (data) {
-                console.log(data);
-                var images = data.responseJSON;
+var getImages = function() {
+    var ajaxreq = $.ajax({
+        url: "http://37.230.98.72/htf/api/images",
+        dataType: "json",
+        headers: {'Authorization': 'Bearer ' + Cookies.get("accessToken")},
+        type: "GET",
+        timeout: 3000,
+        complete: function (data) {
+            console.log(data);
+            var images = data.responseJSON;
 
-                for (i = 0; i < images.length; i++) {
-                    console.log(images[i]);
+            for (i = 0; i < images.length; i++) {
+                console.log(images[i]);
 
-                    $('.ImageCollection').append("<li class='collection-item'>" + "<div class='card-panel'>" + "<span class='red-text text-darken-2'>" + "<h3>" +  images[i].user.name + "</h3>"+ "<img class='resize' src=http://37.230.98.72/htf" + images[i].url + ">" + "</span>" + "</div>" + "</li>");
-                }
+                $('.ImageCollection').append("<li class='collection-item'>" + "<div class='card-panel'>" + "<span class='red-text text-darken-2'>" + "<h3>" +  images[i].user.name + "</h3>"+ "<img class='resize' src=http://37.230.98.72/htf" + images[i].url + ">" + "</span>" + "</div>" + "</li>");
             }
+        }
 
-        })
+    })
 
-    };
+};
