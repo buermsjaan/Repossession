@@ -19,11 +19,13 @@
 
     <a href=login.php id="login" class="waves-effect waves-light btn">Click here to log in</a>
 
+    
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 
-<script src=/assets/js/test.js></script>
+<script src=assets/js/test.js></script>
 
 </html>

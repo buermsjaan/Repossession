@@ -5,7 +5,7 @@ console.log("LETSGO");
 
 $(document).ready(function () {
 
-    $("#login").on("click",loginFunction);
+    loginFunction();
 
 });
 

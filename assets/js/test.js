@@ -1,25 +1,32 @@
 /**
  * Created by jaan on 30/11/2017.
  */
+$(document).ready(function () {
 
-var thisData = {
-    "qrCode": "91a3d65875df88e809f86b120e096f04ce5702013c7978c1e48b4d5f03edcdd6a18d150c0c582449b5ed0d73284fc2cbff6b03"
-};
+    getTerrorists();
 
-var ajaxreq = $.ajax({
-    url: "http://37.230.98.72/htf/api/terrorists",
-    dataType: "json",
-    headers : { 'Authorization': 'Bearer'},
-    type: "GET",
-    timeout: 3000,
-    success: function() { alert('Success!' + authHeader); }
-}).done(function(r) {
-        request = r;
+});
 
-        console.log(request);
+var getTerrorists = function() {
+    var ajaxreq = $.ajax({
+        url: "http://37.230.98.72/htf/api/terrorists",
+        dataType: "json",
+        headers: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTIwMzgxMTAsImRhdGEiOnsidXNlciI6eyJpZCI6IjVhMTk4YTMyODBhZTM5NWYzMDRjZGMxYyIsInJvbGUiOjB9fSwiaWF0IjoxNTEyMDM2MzEwfQ.8R6lxyJfUWmSWhuVaMJDKOsihYGNTMopP8HZqYZLQ7w'},
+        type: "GET",
+        timeout: 3000,
+        complete: function (data) {
 
-    })
-    .fail(function(){
+            var terrorists = data.responseJSON;
+
+           for (i = 0; i < terrorists.length; i++) {
+               console.log(terrorists[i])
+
+               $
+           }
+        }
+
+    })};
 
 
-    });
+
+
