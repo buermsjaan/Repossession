@@ -42,6 +42,18 @@
 
             </div>
         </li>
+
+        <li>
+            <div class="collapsible-header">
+                Images
+            </div>
+
+            <div class="collapsible-body">
+                <span><ul class="ImageCollection"></ul></span>
+
+            </div>
+        </li>
+    </ul>
             </ul>
 </div>
 
