@@ -25,16 +25,6 @@
                tabindex=-1>
     </label>
 
-    <label class="qrcode-text-bt" for="file">Choose a file
-
-        <input class="input" type=file
-               accept="image/*"
-               capture=environment
-               onchange="openQRCamera(this);"
-               tabindex=-1>
-    </label>
-
-
 
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
