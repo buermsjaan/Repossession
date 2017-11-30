@@ -5,6 +5,10 @@ body{
     font-size: 48px;
 }
 
+h3{
+    font-size: 54px;
+}
+
 .qrcode-text-btn {
     display: inline-block;
     height: 1em;
