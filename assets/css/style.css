@@ -13,6 +13,12 @@ body{
 
 }
 
+#login
+{
+    color:#984843;
+    background-color: #233237;
+}
+
 h1{
     font-family: myFirstFont;
     color: #984843;
@@ -50,21 +56,16 @@ h3{
     vertical-align: middle;
 }
 
-<<<<<<< HEAD
 .collapsible-header
 {
     background-color: #233237;
-    color: #984843;
+    color: #EAC67A  ;
 }
 
-.collapsible-body
-{
+.collapsible-body {
     background-color: #233237;
-=======
-img.resize {
-    height: auto;
-    width: auto;
-    max-width: 400px;
-    max-height: 400px;
->>>>>>> 33ca2d696e522fbc39204a039b68de195f282f2e
+}
+
+.card-panel {
+    background-color: #233237;
 }
