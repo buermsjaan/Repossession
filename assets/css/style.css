@@ -2,11 +2,11 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    font-size: 48px;
+    font-size: 16px;
 }
 
 h3{
-    font-size: 54px;
+    font-size: 26px;
 }
 
 .qrcode-text-btn {
@@ -36,3 +36,4 @@ h3{
     margin-left: -1.7em;
     vertical-align: middle;
 }
+
