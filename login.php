@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="center-align container">
     <h1 class="center-align">Login</h1>
 
     <label class="qrcode-text-bt">

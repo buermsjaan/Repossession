@@ -3,13 +3,19 @@
 
 @font-face {
     font-family: myFirstFont;
-    src: url(/assets/fonts/Starjedi.ttf);
+    src: url(../fonts/JosefinSans-Bold.ttf);
 }
 
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    background-color: #18121E;
 
+}
+
+h1{
+    font-family: myFirstFont;
+    color: #984843;
 }
 
 h3{
@@ -44,3 +50,13 @@ h3{
     vertical-align: middle;
 }
 
+.collapsible-header
+{
+    background-color: #233237;
+    color: #984843;
+}
+
+.collapsible-body
+{
+    background-color: #233237;
+}
